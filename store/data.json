@@ -1,0 +1,39 @@
+{
+  "sections": [
+    {
+      "id": "films",
+      "title": "A COLLECTION OF FILMS",
+      "cards": [
+        {"title": "Rock & Bowl Express"},
+        {"title": "Powerless Ranger"},
+        {"title": "Reading Rainbow?"}
+      ]
+    },
+    {
+      "id": "music",
+      "title": "ORIGINAL MUSIC AND SOUNDTRACKS",
+      "cards": [
+        {"title": "a song"},
+        {"title": "a song"},
+        {"title": "a song"},
+        {"title": "a song"},
+        {"title": "a song"},
+        {"title": "a song"},
+        {"title": "a song"},
+        {"title": "a song"}
+      ]
+    },
+    {
+      "id": "code",
+      "title": "GAMES, PROJECTS, AND APPS",
+      "cards": [
+        {"title": "a project"},
+        {"title": "a project"},
+        {"title": "a project"},
+        {"title": "a project"},
+        {"title": "a project"},
+        {"title": "a project"}
+      ]
+    }
+  ]
+}

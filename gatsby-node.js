@@ -46,6 +46,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const postPage = path.resolve("src/templates/post.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
+  const filmProject = path.resolve("src/templates/FilmProject/filmProject.jsx");
+
 
   const markdownQueryResult = await graphql(
     `
@@ -69,10 +71,54 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   );
 
+  const filmResults = await graphql(
+    `
+    {
+      allFilmsJson {
+        edges {
+          node {
+            id,
+            date,
+            header,
+            genre,
+            duration,
+            bannerImg,
+            awards {
+              name,
+              date
+            }
+            paragraphs {
+              type,
+              value
+            }
+          }
+        }
+      }
+    }
+    `
+  );
+
+
+  if (filmResults.errors) {
+    console.error(filmResults.errors) 
+    throw filmResults.errors;
+  }
+
   if (markdownQueryResult.errors) {
     console.error(markdownQueryResult.errors);
     throw markdownQueryResult.errors;
   }
+
+  const filmEdges = filmResults.data.allFilmsJson.edges;
+  filmEdges.forEach((edge, index) => {
+    createPage({
+      path: edge.node.id,
+      component: filmProject,
+      context: {
+        ...edge.node
+      }
+    });    
+  });
 
   const tagSet = new Set();
   const categorySet = new Set();

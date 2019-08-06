@@ -1,0 +1,21 @@
+{
+	"id": "powerless-ranger",
+	"date": "01/10/2018",
+	"header": "Powerless Ranger",
+	"genre": "Comedy",
+	"duration": "32 min",	
+	"bannerImg": "static/rock-and-bowl-express-banner.png",
+	"awards": [
+		{
+			"id": "ok",
+			"name": "ok", 
+			"date": "ok"
+		}
+	],
+	"paragraphs": [
+		{
+			"type": "a-type",
+			"value": "some text"
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"id": "reading-rainbow",
+	"date": "01/10/2017",
+	"header": "Reading Rainbow",
+	"genre": "Comedy",
+	"duration": "32 min",
+	"bannerVideo": "someurl",
+	"bannerImg": "rock-and-bowl-express-banner.png",
+	"awards": [
+		{
+			"id": "ok",
+			"name": "ok", 
+			"date": "ok"
+		}
+	],
+	"paragraphs": [
+		{
+			"type": "a-type",
+			"value": "some text"
+		}
+	]
+}
