@@ -21,26 +21,26 @@ const Header = () =>
         </div>
 
         <div className='row mb-4 pr-2'>
-          <div className='col-md-3 pr-0'>
+          <div className='col-md-4 pr-0'>
             <button type="button" className="btn btn-dark">
               <a href='#films'><img src={film}/>Films</a>
               </button>
             </div>
-          <div className='col-md-3 pr-0'>
+          <div className='col-md-4 pr-0'>
             <button type="button" className="btn btn-dark">
               <a href='#music'><img src={music}/>Music</a>
             </button>
           </div>
-          <div className='col-md-3 pr-0'>
+          <div className='col-md-4 pr-0'>
             <button type="button" className="btn btn-dark">
-              <a href='#code'><img src={code}/>Code</a>
+              <a href='#apps'><img src={code}/>Code</a>
             </button>
           </div>
-          <div className='col-md-3 pr-0'>
+          {/* <div className='col-md-3 pr-0'>
             <button type="button" className="btn btn-dark">
               <a href=''><img src={about}/>About</a>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

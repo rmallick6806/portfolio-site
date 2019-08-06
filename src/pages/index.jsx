@@ -10,16 +10,32 @@ import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 
 class Index extends React.Component {
-
-  getSections(sections) {
+  getSections(films = [], music = [], apps = []) {
+    const sections = [
+      {
+        id: 'films',
+        title: 'A COLLECTION OF FILMS',
+        data: films
+      },
+      {
+        id: 'music',
+        title: 'ORIGINAL MUSIC AND SOUNDTRACKS',
+        data: music
+      },
+      {
+        id: 'apps',
+        title: 'GAMES, PROJECTS, AND APPS',
+        data: apps
+      }      
+    ]; 
     return (
       sections.map((section, idx) => {
-         return <Section
-          key={idx}
-          id={section.id}
+         return <Section 
+          key={section.id} 
+          id={section.id} 
           title={section.title}
-          cards={section.cards}
-        />
+          data={section.data}
+       />
       })
     );
   }
@@ -29,7 +45,6 @@ class Index extends React.Component {
     const props = this.props;
     const films = props.data.allFilmsJson.edges;
     console.log(films, '!!!');
-    const sections = props.data.allStoreJson.edges[0].node.sections;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout>
@@ -38,13 +53,7 @@ class Index extends React.Component {
           <Helmet title={config.siteTitle} />
           <SEO />
           <Features />
-          <Section 
-            key={'films'} 
-            id={'films'} 
-            title={'A COLLECTION OF FILMS'}
-            data={films}
-          />
-          {/* {this.getSections(sections)} */}
+          {this.getSections(films)}
           {/* <PostListing postEdges={postEdges} /> */}
         </div>
       </Layout>
@@ -57,19 +66,6 @@ export default Index;
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query IndexQuery {
-    allStoreJson {
-      edges {
-        node {
-          sections {
-            id,
-            title,
-            cards {
-              title
-            }
-          }
-        }
-      }
-    },
     allFilmsJson {
       edges {
         node {

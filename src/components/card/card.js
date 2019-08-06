@@ -1,7 +1,7 @@
-import React from 'react';
-
-import './card.scss';
 import { Link } from 'gatsby';
+import React from 'react';
+import './card.scss';
+
 
 const Card = (props) => (
   <div className="col outer-card-container">

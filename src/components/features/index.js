@@ -6,9 +6,9 @@ const Featured = (props) =>
     <section>
     <div className="container featured">
       <div className="row">
-        <div className="col-md-8">
+        <div className="col">
           <div className='main-featured'
-            style={{backgroundImage: `url(https://picsum.photos/4${Math.floor(Math.random() * 100)}/300/?random)`}}>
+            style={{backgroundImage: `url(rock-and-bowl-express-banner.png)`}}>
             <div className='text-container featured-header'>
              Featured
             </div>
@@ -21,12 +21,12 @@ const Featured = (props) =>
              </div>
           </div>
         </div>
-        <div className="col-md-4">
+        {/* <div className="col-md-4">
           <div className='second-featured'
             style={{backgroundImage: `url(https://picsum.photos/4${Math.floor(Math.random() * 100)}/?random)`}}>
             <div className='text-container'>Brand New</div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
     </section>
