@@ -17,5 +17,6 @@
 			"type": "a-type",
 			"value": "some text"
 		}
-	]
+	],
+	"grid": []
 }

@@ -44,7 +44,6 @@ class Index extends React.Component {
   render() {
     const props = this.props;
     const films = props.data.allFilmsJson.edges;
-    console.log(films, '!!!');
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout>

@@ -5,7 +5,7 @@ import './card.scss';
 
 const Card = (props) => (
   <div className="col outer-card-container">
-    <Link to={props.id} passHref>
+    <Link to={"/" + props.id} passhref="true">
       <div className='card-box'>
         <div className='card-container'>
           <div className='img-container' style={{backgroundImage: `url(${props.bannerImg})`}} />
