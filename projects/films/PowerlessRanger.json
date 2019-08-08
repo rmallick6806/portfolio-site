@@ -3,7 +3,8 @@
 	"date": "01/10/2018",
 	"header": "Powerless Ranger",
 	"genre": "Comedy",
-	"duration": "12 min",	
+	"duration": "12 min",
+	"bannerVideo": "someurl",
 	"bannerImg": "powerless-ranger2.png",
 	"awards": [
 		{
@@ -12,10 +13,11 @@
 			"date": "ok"
 		}
 	],
-	"paragraphs": [
-		{
-			"type": "a-type",
-			"value": "some text"
-		}
-	]
+	"shortDescription": "",
+	"longDescription": [
+		"In this mockumentary, a film crew follows the story of three wrestlers, Francisco, Nick and Smitty, as they continually fumble in their hopes of becoming professional wrestlers. As a bowling-themed tag-team trio, they are known together as the ‘Rock and Bowl Express’.",
+		"Struggling to gain recognition and respect in the wrestling world, the film crew captures the trio as they attempt to prove themselves for their chance in the indie wrestling spotlight. The trio are the laughing stock of indie wrestling, and can only find chances to perform as wrestlers in children’s birthday parties. As tensions and frustrations mount, Francisco (Thick Vick) has to consider whether it’s worth it for him to be in the ‘Rock and Bowl Express’."
+	],
+	"paragraphs": [""],
+	"grid": [""]
 }

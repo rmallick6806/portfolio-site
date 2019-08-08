@@ -87,10 +87,10 @@ exports.createPages = async ({ graphql, actions }) => {
               name,
               date
             }
-            paragraphs {
-              type,
-              value
-            }
+            shortDescription,
+            longDescription,
+            paragraphs,
+            grid
           }
         }
       }

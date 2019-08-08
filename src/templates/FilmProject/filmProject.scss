@@ -1,20 +1,56 @@
-.main-banner-container {
-  // display: grid;
-  // grid-template-columns: 0.7fr 1fr;
+.film-project {
 
-  .banner-img-container {
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+  .color-border-line {
+    height: 10px;
+    background-color: #ffc107;
   }
 
-  .banner-header-container {
-    .movie-headline {
-      text-transform: uppercase;
-      font-weight: bold;
-      text-align: center;
-      font-size: 100%
+  .banner-player {
+    background-color: #e1e1e1;
+    width: 100%;
+    height: 61vw;
+    max-height: 600px;
+    border-radius: 5px;
+  }
+
+  .movie-headline {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+    font-size: 2em;
+  }
+
+  .main-banner-container {
+    // display: grid;
+    // grid-template-columns: 0.7fr 1fr;
+  
+    .banner-img-container {
+      // border: 10px solid pink;
+      width: 100%;
+      height: auto;
+    }
+  
+    .banner-header-container {
+      margin-left: 20px;
+      .banner-text {
+        font-size: 12pt;
+      }
     }
   }
 
+  .movie-description {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .film-project {
+    .main-banner-container {
+      .banner-header-container {
+        margin-top: 20px;
+        margin-left: 0px;
+      }
+    }
+  }
 }
