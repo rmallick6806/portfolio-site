@@ -1,0 +1,22 @@
+{
+	"id": "hacked",
+	"date": "01/10/2017",
+	"header": ".hacked",
+	"genre": "Game",
+	"stack": "React",
+	"linkOnly": true,
+	"url": "https://github.com/rmallick6806/hackedthegame",
+	"bannerImg": "reading-rainbow.png",
+	"poster": "hacked-5.png",
+	"awards": [
+		{
+			"id": "ok",
+			"name": "ok", 
+			"date": "ok"
+		}
+	],
+	"shortDescription": "",
+	"longDescription": [""],
+	"paragraphs": [""],
+	"grid": [""]
+}

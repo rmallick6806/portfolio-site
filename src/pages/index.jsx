@@ -18,15 +18,15 @@ class Index extends React.Component {
         data: films
       },
       {
-        id: 'music',
-        title: 'ORIGINAL MUSIC AND SOUNDTRACKS',
-        data: music
-      },
-      {
         id: 'apps',
         title: 'GAMES, PROJECTS, AND APPS',
         data: apps
-      }      
+      },      
+      {
+        id: 'music',
+        title: 'ORIGINAL MUSIC AND SOUNDTRACKS',
+        data: music
+      }     
     ]; 
     return (
       sections.map((section, idx) => {
@@ -44,6 +44,7 @@ class Index extends React.Component {
   render() {
     const props = this.props;
     const films = props.data.allFilmsJson.edges;
+    const apps = props.data.allAppsJson.edges;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout>
@@ -52,7 +53,7 @@ class Index extends React.Component {
           <Helmet title={config.siteTitle} />
           <SEO />
           <Features />
-          {this.getSections(films)}
+          {this.getSections(films, [], apps)}
           {/* <PostListing postEdges={postEdges} /> */}
         </div>
       </Layout>
@@ -65,6 +66,20 @@ export default Index;
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query IndexQuery {
+    allAppsJson {
+      edges {
+        node {
+          id,
+          date,
+          header,
+          genre,
+          stack,
+          poster,
+          url,
+          linkOnly
+        }
+      }
+    },
     allFilmsJson {
       edges {
         node {
@@ -73,11 +88,7 @@ export const pageQuery = graphql`
           header,
           genre,
           duration,
-          bannerImg,
-          awards {
-            name,
-            date
-          }
+          poster
         }
       }
     },    

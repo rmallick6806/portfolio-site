@@ -6,7 +6,7 @@ import { sortByDate } from '../../utils/sortUtils';
 
 const EmptySection = () => (
     <div className='col-md-6 mt-5 mb-5'>
-      <h2> Portfolio upload in progress. Check back soon for updates. </h2>
+      <h2> Portfolio upload in progress... </h2>
   </div>
 );
 

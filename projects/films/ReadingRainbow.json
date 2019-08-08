@@ -3,20 +3,14 @@
 	"date": "01/10/2017",
 	"header": "Reading Rainbow",
 	"genre": "Comedy",
-	"duration": "2 min",
+	"duration": "1 min",
 	"bannerVideo": "someurl",
 	"bannerImg": "reading-rainbow.png",
-	"awards": [
-		{
-			"id": "ok",
-			"name": "ok", 
-			"date": "ok"
-		}
-	],
+	"poster": "reading-rainbow.png",
+	"awards": [],
 	"shortDescription": "",
 	"longDescription": [
-		"In this mockumentary, a film crew follows the story of three wrestlers, Francisco, Nick and Smitty, as they continually fumble in their hopes of becoming professional wrestlers. As a bowling-themed tag-team trio, they are known together as the ‘Rock and Bowl Express’.",
-		"Struggling to gain recognition and respect in the wrestling world, the film crew captures the trio as they attempt to prove themselves for their chance in the indie wrestling spotlight. The trio are the laughing stock of indie wrestling, and can only find chances to perform as wrestlers in children’s birthday parties. As tensions and frustrations mount, Francisco (Thick Vick) has to consider whether it’s worth it for him to be in the ‘Rock and Bowl Express’."
+		"Mark never learned how to read. And it seems like everything is taunting him; its time to finally let go."
 	],
 	"paragraphs": [""],
 	"grid": [""]

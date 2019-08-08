@@ -1,0 +1,22 @@
+{
+	"id": "solar-system-builder",
+	"date": "01/10/2018",
+	"header": "Solar System Builder",
+	"genre": "Game",
+	"stack": "React/Three.JS",
+	"linkOnly": true,
+	"url": "https://github.com/rmallick6806/SolarSystemBuilder",
+	"bannerImg": "reading-rainbow.png",
+	"poster": "SolarSystem-6.png",
+	"awards": [
+		{
+			"id": "ok",
+			"name": "ok", 
+			"date": "ok"
+		}
+	],
+	"shortDescription": "",
+	"longDescription": [""],
+	"paragraphs": [""],
+	"grid": [""]
+}

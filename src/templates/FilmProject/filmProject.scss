@@ -11,6 +11,21 @@
     height: 61vw;
     max-height: 600px;
     border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 1px 7px 0px #e1e1e1;  
+  }
+
+  .play-button {
+    cursor: pointer;
+    width: 9vw;
+  }
+
+  .play-button:hover {
+    width: 10vw;
   }
 
   .movie-headline {
@@ -21,11 +36,8 @@
   }
 
   .main-banner-container {
-    // display: grid;
-    // grid-template-columns: 0.7fr 1fr;
-  
+
     .banner-img-container {
-      // border: 10px solid pink;
       width: 100%;
       height: auto;
     }

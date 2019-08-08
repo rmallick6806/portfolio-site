@@ -24,10 +24,11 @@
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    
+    background-position: center;
     &:hover {
 
     }
+
 
     .text-container {
       font-weight: bold;
@@ -37,6 +38,7 @@
       padding: 40px 30px;
       text-align: left;
       text-shadow: 0px 1px 2px black;
+      
       &:hover {
         cursor: pointer;
       }
@@ -46,6 +48,11 @@
         text-transform: none;
         font-size: 0.9rem;
       }
+    }
+
+    .main-featured-text-container {
+      background-color: #343a40bf;
+      padding: 25px 30px;
     }
 
     .featured-header {
@@ -69,6 +76,24 @@
       text-align: left;
       top: 0px;
       bottom: auto;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .featured {
+    .main-featured,
+    .second-featured {
+      height: 300px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .featured {
+    .main-featured,
+    .second-featured {
+      height: 290px;
     }
   }
 }

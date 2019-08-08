@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import Layout from "../../layout";
 import config from "../../../data/SiteConfig";
 
+import playButton from '../../../static/play-button.svg';
 import './filmProject.scss';
 import SocialLinks from "../../components/SocialLinks/SocialLinks";
 
@@ -32,26 +33,53 @@ export default class FilmProjectTemplate extends React.Component {
     ));
   }
 
+  renderVideoBanner = (img, video) => {
+    return (
+      <div 
+        className='banner-player mb-4'
+        style={{backgroundImage: `url(${img})`}}
+      >
+        <a href={video}>
+          <img className='play-button' src={playButton}></img>
+        </a>
+      </div>
+    );
+  }
+
   render() {
     const { pageContext } = this.props;
-    const { id, bannerImg, longDescription, duration, genre, header, awards, paragraphs } = pageContext;
+    const { 
+      id,
+      bannerImg,
+      bannerVideo,
+      longDescription, 
+      duration, 
+      genre, 
+      header, 
+      awards, 
+      paragraphs,
+      poster
+    } = pageContext;
     return (
       <Layout>
         <Helmet><title>{`${header || config.siteTitle}`}</title></Helmet>
         <div className='film-project'>
           <div className='main-banner-container container'>
-            <div className='banner-player mb-4'></div>
+            {this.renderVideoBanner(bannerImg, bannerVideo)}
             <div className='movie-headline'>{header}</div>
             <div className='col color-border-line mb-4 mt-3' />
             <div className='row'>
               <div className='col-lg-4'>
-                <img className='banner-img-container' src={bannerImg} />
+                <img className='banner-img-container' src={poster} />
               </div>
               <div className='col banner-header-container'>
                 {this.renderLongDescription(longDescription)}
-                <div className='awards-section banner-text'>
-                  <strong>Awards: </strong> {this.renderAwards(awards)}
-                </div>
+                {
+                  (awards.length > 0) ? 
+                    <div className='awards-section banner-text'>
+                      <strong>Awards: </strong> {this.renderAwards(awards)}
+                    </div> : null
+                }
                 <div className='genre-section banner-text'>
                   <strong>Genre: </strong>
                   {genre}

@@ -5,6 +5,7 @@ import code from '../../../static/code.svg';
 import about from '../../../static/about.svg';
 
 import './_header.scss';
+import { Link } from 'gatsby';
 
 const Header = () =>
   (
@@ -21,26 +22,34 @@ const Header = () =>
         </div>
 
         <div className='row mb-4 pr-2'>
-          <div className='col-md-4 pr-0'>
-            <button type="button" className="btn btn-dark">
-              <a href='#films'><img src={film}/>Films</a>
+          <div className='col pr-0'>
+            <Link to="#films">
+              <button type="button" className="btn btn-dark">
+                <img src={film}/><span>Films</span>
               </button>
+            </Link>
             </div>
-          <div className='col-md-4 pr-0'>
-            <button type="button" className="btn btn-dark">
-              <a href='#music'><img src={music}/>Music</a>
-            </button>
+          <div className='col pr-0'>
+            <Link to="#music">
+              <button type="button" className="btn btn-dark">
+                <img src={music}/><span>Music</span>
+              </button>
+            </Link>
           </div>
-          <div className='col-md-4 pr-0'>
-            <button type="button" className="btn btn-dark">
-              <a href='#apps'><img src={code}/>Code</a>
-            </button>
+          <div className='col pr-0'>
+            <Link to="#apps">
+              <button type="button" className="btn btn-dark">
+                <img src={code}/><span>Code</span>
+              </button>
+            </Link>
           </div>
-          {/* <div className='col-md-3 pr-0'>
-            <button type="button" className="btn btn-dark">
-              <a href=''><img src={about}/>About</a>
-            </button>
-          </div> */}
+          <div className='col pr-0'>
+            <Link to="#about">
+              <button type="button" className="btn btn-dark">
+                <img src={about}/><span>About</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </header>

@@ -1,0 +1,22 @@
+{
+	"id": "airdrum",
+	"date": "01/10/2015",
+	"header": "AirDrum",
+	"genre": "App",
+	"stack": "React/Myo",
+	"linkOnly": true,
+	"url": "https://github.com/rmallick6806/AirDrumv3",
+	"bannerImg": "reading-rainbow.png",
+	"poster": "airdrum.png",
+	"awards": [
+		{
+			"id": "ok",
+			"name": "ok", 
+			"date": "ok"
+		}
+	],
+	"shortDescription": "",
+	"longDescription": [""],
+	"paragraphs": [""],
+	"grid": [""]
+}

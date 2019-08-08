@@ -83,6 +83,8 @@ exports.createPages = async ({ graphql, actions }) => {
             genre,
             duration,
             bannerImg,
+            bannerVideo,
+            poster,
             awards {
               name,
               date
