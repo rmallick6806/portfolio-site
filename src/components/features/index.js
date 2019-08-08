@@ -2,9 +2,8 @@ import React from 'react';
 import './_features.scss';
 import { Link } from 'gatsby';
 
-const Featured = (props) =>
-  (
-    <section>
+const Featured = (props) =>(
+  <section>
     <div className="container featured">
       <div className="row">
         <div className="col">
@@ -12,7 +11,7 @@ const Featured = (props) =>
             <div className='main-featured'
               style={{backgroundImage: `url(rock-and-bowl-express-banner.png)`}}>
               <div className='text-container featured-header'>
-              Featured
+                Featured
               </div>
               <div className='text-container main-featured-text-container'>
                 <div>My latest film.</div>
@@ -33,7 +32,7 @@ const Featured = (props) =>
         </div>
       </div>
     </div>
-    </section>
-  );
+  </section>
+);
 
 export default Featured;
