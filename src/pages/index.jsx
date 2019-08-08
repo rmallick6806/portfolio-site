@@ -41,7 +41,6 @@ class Index extends React.Component {
     );
   }
 
-
   render() {
     const props = this.props;
     const films = props.data.allFilmsJson.edges;
@@ -56,7 +55,6 @@ class Index extends React.Component {
           <Features />
           {this.getSections(films, [], apps)}
           {/* <PostListing postEdges={postEdges} /> */}
-          
         </div>
         <About />
       </Layout>
