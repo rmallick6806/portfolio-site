@@ -8,6 +8,7 @@ import Layout from "../layout";
 import Header from '../components/header';
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
+import About from "../components/About/About";
 
 class Index extends React.Component {
   getSections(films = [], music = [], apps = []) {
@@ -55,7 +56,9 @@ class Index extends React.Component {
           <Features />
           {this.getSections(films, [], apps)}
           {/* <PostListing postEdges={postEdges} /> */}
+          
         </div>
+        <About />
       </Layout>
     );
   }

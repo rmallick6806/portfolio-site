@@ -4,10 +4,9 @@ import "./About.scss";
 class About extends Component {
   render() {
     return (
-      <div className="about-me-container">
-        <h1>
-          Edit About component or pages/about.jsx to include your information.
-        </h1>
+      <div id="about" className="container about-me-container">
+        <div className='about-me-color-line'/>
+        <h4 className='header'>Who Am I?</h4>
       </div>
     );
   }
