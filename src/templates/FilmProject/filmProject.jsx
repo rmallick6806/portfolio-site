@@ -91,7 +91,9 @@ export default class FilmProjectTemplate extends React.Component {
               </div>
             </div>
             {this.renderParagraphs(paragraphs)}
-            {/* <SocialLinks /> */}
+            <div className='social-link-container mt-5 mb-5'>
+              <SocialLinks pageContext={pageContext}/>
+            </div>
           </div>
         </div>
       </Layout>

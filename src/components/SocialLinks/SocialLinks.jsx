@@ -20,9 +20,9 @@ import "./SocialLinks.css";
 
 class SocialLinks extends Component {
   render() {
-    const { postNode, postPath, mobile } = this.props;
-    const post = postNode.frontmatter;
-    const url = urljoin(config.siteUrl, config.pathPrefix, postPath);
+    const { pageContext, mobile } = this.props;
+    const { header, id, shortDescription } = pageContext;
+    const url = urljoin(config.siteUrl, config.pathPrefix, id);
     const iconSize = mobile ? 36 : 48;
     const filter = count => (count > 0 ? count : "");
     const renderShareCount = count => (
@@ -31,16 +31,16 @@ class SocialLinks extends Component {
 
     return (
       <div className="social-links">
-        <RedditShareButton url={url} title={post.title}>
+        <RedditShareButton url={url} title={header}>
           <RedditIcon round size={iconSize} />
           <RedditShareCount url={url}>
             {count => renderShareCount(count)}
           </RedditShareCount>
         </RedditShareButton>
-        <TwitterShareButton url={url} title={post.title}>
+        <TwitterShareButton url={url} title={header}>
           <TwitterIcon round size={iconSize} />
         </TwitterShareButton>
-        <FacebookShareButton url={url} quote={postNode.excerpt}>
+        <FacebookShareButton url={url} quote={shortDescription}>
           <FacebookIcon round size={iconSize} />
           <FacebookShareCount url={url}>
             {count => renderShareCount(count)}
@@ -48,8 +48,8 @@ class SocialLinks extends Component {
         </FacebookShareButton>
         <LinkedinShareButton
           url={url}
-          title={post.title}
-          description={postNode.excerpt}
+          title={header}
+          description={shortDescription}
         >
           <LinkedinIcon round size={iconSize} />
           <LinkedinShareCount url={url}>

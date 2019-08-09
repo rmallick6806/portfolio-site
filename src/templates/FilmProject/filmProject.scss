@@ -22,10 +22,12 @@
   .play-button {
     cursor: pointer;
     width: 9vw;
+    max-width: 120px;
   }
 
   .play-button:hover {
     width: 10vw;
+    max-width: 135px;
   }
 
   .movie-headline {
